@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosty formularz</title>
+</head>
+<body>
+   <a href="lista.php">Lista uczniów</a> 
+    <form action="cw22.php" method="POST">
+        <div>
+            <label for="name">Imię: </label>
+            <input class="wpisy" type="text" name="name" id="name">
+        </div>
+
+        <div>
+            <label for="nazw">Nazwisko: </label>
+            <input class="wpisy" type="text" name="nazw" id="nazw">
+        </div>
+
+        <div>
+            <label for="data">Data Urodzenia: </label>
+            <input class="wpisy" type="date" name="data" id="data" value="2000-01-01">
+        </div>
+        <select name="grups">
+            <option value="">Wybierz Klasę</option>
+            <option value="1A">1A</option>
+            <option value="1B">1B</option>
+            <option value="1C">1C</option>
+            <option value="2A">2A</option>
+            <option value="2B">2B</option>
+            <option value="3A">3A</option>
+          </select> 
+        <div class="zapisz">
+            <input type="submit" value="Zapisz">
+        </div>
+    </form>
+</body>
+</html>

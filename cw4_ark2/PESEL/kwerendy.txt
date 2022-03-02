@@ -1,0 +1,8 @@
+Zapytanie 1
+SELECT id,tytul,tresc FROM `ogloszenie` WHERE kategoria = 1
+Zaytanie 2
+SELECT uz.telefon FROM `ogloszenie` as og INNER JOIN uzytkownik as uz on uz.id = og.uzytkownik_id  WHERE og.id = 1
+Zapytanie 3
+CREATE USER "moderator" IDENTIFIED BY "qwerty";
+Zapytanie 4
+Grant Select, Delete On 3tipg_ark2.ogloszenie TO moderator@localhost;

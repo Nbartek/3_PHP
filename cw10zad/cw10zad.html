@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Prosty formularz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="cssZad.css">
+    </head>
+    <body>
+        <form action="wynikZad.php" method="POST">
+        <div>
+            <label for="name">Imię: </label>
+            <input class="wpisy" type="text" name="name" id="name">
+        </div>
+
+        <div>
+            <label for="nazw">Nazwisko: </label>
+            <input class="wpisy" type="text" name="nazw" id="nazw">
+        </div>
+
+        <div>
+            <label for="data">Data Urodzenia: </label>
+            <input class="wpisy" type="date" name="data" id="data" value="2000-01-01">
+        </div>
+
+        <div id="zainteresowania">
+            <span>Twoje Zainteresowania: </span><br>
+        <input type="checkbox" id="swimming" name="swimming" value="Swimming">
+        <label for="swimming">Pływanie </label><br>
+        <input type="checkbox" id="gym" name="gym" value="Gym">
+        <label for="gym">Siłownia </label><br>
+        <input type="checkbox" id="cook" name="cook" value="Cook">
+        <label for="cook">Gotowanie </label><br>
+        <input type="checkbox" id="read" name="read" value="Read">
+        <label for="read">Czytanie </label><br>
+        <input type="checkbox" id="games" name="games" value="Games">
+        <label for="games">Gra w gry wideo </label><br>
+        <input type="checkbox" id="tennis" name="tennis" value="Tennis">
+        <label for="tennis">Gra w Tennisa </label><br>
+        <input type="checkbox" id="sleep" name="sleep" value="Sleep">
+        <label for="sleep">Spanie </label><br>
+        </div>
+
+        <div id="plec">
+            <p>Wybierz swoja płeć: </p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Mężczyzna</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Kobieta</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Inne</label> 
+        </div>
+
+        <select name="zawody">
+            <option value=" ">Wybierz zawód</option>
+            <option value="doc">Lekarz</option>
+            <option value="shop">Sprzedawca</option>
+            <option value="speditionist">Spedytor</option>
+            <option value="butcher">Rzeźnik</option>
+            <option value="informatic">Informatyk</option>
+            <option value="mechanic">Mechanik</option>
+          </select> 
+
+        <div class="zapisz">
+            <input type="submit" value="Zapisz">
+        </div>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="badge-info p-3 text-center">Operacje na formularzu</h1>
+        <form action="wyniik.php" method="POST">
+            <div class="form-group">
+                <label for="a">Podaj a: </label>
+                <input class="form-control" type="text" name="a" id="a">
+            </div>
+            <div class="form-group">
+                <label for="b">Podaj b: </label>
+                <input class="form-control" type="text" name="b" id="b">
+            </div>
+            <div class="form-group">
+                <div class="form-check ml-4">
+                   <input type="radio" name="wyb" id="+" value="+" checked=''>
+                    <label class="form-check-label" for="+">Dodaj</label>
+                </div>
+                <div class="form-check ml-4">
+                    <input type="radio" name="wyb" id="-" value="-">
+                    <label class="form-check-label" for="-">Odejmij</label>
+                </div>
+                <div class="form-check ml-4">
+                    <input type="radio" name="wyb" id="/" value="/">
+                    <label class="form-check-label" for="/">Dziel</label>
+                </div>
+                <div class="form-check ml-4">
+                    <input type="radio" name="wyb" id="*" value="*">
+                    <label class="form-check-label" for="*">Pomnóż</label>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <input class="btn btn-lg btn-info w-100" type="submit" value="Zapisz">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

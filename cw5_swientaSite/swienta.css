@@ -1,0 +1,216 @@
+/* Podstawowy układ strony */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family:'Franklin Gothic Medium', sans-serif;
+  }
+  
+  /* Menu boczne */
+  aside {
+    background-color: #d4af37;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    z-index: 1;
+  }
+  
+  /* strona główna - sekcja */
+  section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  /* ikonka 3 kresek */
+  label {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    z-index: 3;
+    position: fixed;
+  }
+  /* kreska */
+  .bar {
+    display: block;
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto;
+    transition: background-color .5s ease-in, transform .5s ease-in, width .5s ease-in;
+  }
+  /* strona główna klasa(to na czym się wyświetla i te kolory) */
+  .content {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: linear-gradient(-45deg, #e70202, #258f0f);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    z-index: 2;
+    transition: transform .5s ease-in-out;
+  }
+  
+  h1 {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 40px;
+  }
+  /* wyglad dla bocznego menu */
+  .asideList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, .7);
+  }
+  
+  .asideAnchor {
+    border-bottom: 2px solid rgba(255, 255, 255, .7);
+    padding: 20px 0;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    transition: color .3s .15s ease-in;
+  }
+  
+  .asideAnchor::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #fff;
+    width: 0;
+    transition: width .3s ease-in;
+    z-index: -1;
+  }
+  
+  .asideAnchor:hover {
+    color: #d4af37;
+  }
+  
+  .asideAnchor:hover::after {
+    width: 100%;
+  }
+  /* opcje dla zmiany kresek na x */
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked ~ .content {
+    transform: translateX(20%);
+  }
+  
+  input[type="checkbox"]:checked ~ label .bar {
+    background-color: #fff;
+  }
+  
+  input[type="checkbox"]:checked ~ label .top {
+    -webkit-transform: translateY(0px) rotateZ(45deg);
+    -moz-transform: translateY(0px) rotateZ(45deg);
+    -ms-transform: translateY(0px) rotateZ(45deg);
+    -o-transform: translateY(0px) rotateZ(45deg);
+    transform: translateY(0px) rotateZ(45deg);
+  }
+  
+  input[type="checkbox"]:checked ~ label .bottom {
+    -webkit-transform: translateY(-15px) rotateZ(-45deg);
+    -moz-transform: translateY(-15px) rotateZ(-45deg);
+    -ms-transform: translateY(-15px) rotateZ(-45deg);
+    -o-transform: translateY(-15px) rotateZ(-45deg);
+    transform: translateY(-15px) rotateZ(-45deg);
+  }
+  
+  input[type="checkbox"]:checked ~ label .middle {
+    width: 0;
+  }
+  
+  .middle {
+    margin: 0 auto;
+  }
+  /* klasa dla sniegu spadającego */
+  .snow{
+    background-image:
+        url(https://i.imgur.com/uYjnk8N.png),
+           url(https://i.imgur.com/iAGD6MA.png),
+           url(https://i.imgur.com/hIJDjbg.png);
+animation: snow 30s linear infinite;
+}
+  /* Animacje */
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%; 
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+
+    @keyframes snow{
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        100% {background-position: 500px 1000px, 400px 400px, 300px 300px}
+    } 
+
+/* Opcje do w tabeli */
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.btnDropEdit-content .btnDropDelete-content{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.btnDropEdit-content a .btnDropDelete-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.btnDeleteDrop{
+  background-color: red;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.btnEditDrop{
+  background-color: lightseagreen;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.btnDropEdit-content a:hover .btnDropDelete-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .btnDropDelete-content .btnDropEdit-content {display: block;}
+
+.dropdown:hover .btnEditDrop .btnDeleteDrop {background-color: #3e8e41;}

@@ -1,0 +1,5 @@
+1 strona z formularzem(nazwa, cena, daat ważności)
+2 produkt podaje się do listy produktów w pliku prodkukty.txt 
+format bułka|4zł|data
+3 Wyswietlanie produktów:
+ - możliwość wyboru czy tabelka czy lista przez select(w 2 formularzu)

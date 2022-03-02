@@ -1,0 +1,16 @@
+table{
+    margin: 5px;
+    border: 2px solid darkcyan;
+    border-radius: 15px;
+}
+ td{
+    color: chartreuse;
+} 
+#suma{
+    text-align: center;
+}
+#bl{
+    padding-left:  20px;
+    border:solid 1px blueviolet;
+    background-color: chartreuse;
+}
