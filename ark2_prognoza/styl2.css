@@ -31,15 +31,15 @@ float: left;
     background-color: rgb(224, 255, 255);
 }
 table{
-    border:1px blue ;
+    border:1px blue solid;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse:collapse;
 }
-#td{
-    border:1px blue;
+td{
+    border:1px solid blue;
 }
-#th{
-    border:1px blue;
+th{
+    border: 1px solid blue;
     background-color: blue;
     color:white
 }
