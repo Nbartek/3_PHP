@@ -43,3 +43,9 @@ th{
     background-color: blue;
     color:white
 }
+.cold{
+    background-color: cadetblue;
+}
+.hot{
+    background-color: red;
+}
