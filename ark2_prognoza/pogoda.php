@@ -54,7 +54,7 @@
                 }
             }
 
-            
+
             ?>
         </table>
     </section>
@@ -79,40 +79,77 @@
     <div>
         <h2>Z pomocą klasy</h2>
         <?php
-        class AvrAll
+        class AvgDisplay
         {
+            public $tempN;
+            public $tempD;
             public $rain;
             public $pressure;
-            public $nightT;
-            public $dayT;
 
-            function constructor($dayT, $nightT, $pressure, $rain)
+            function set_avg($tempN, $tempD, $rain, $pressure)
             {
-                $this->$dayT = $dayT;
-                $this->$nightT = $nightT;
-                $this->$pressure = $pressure;
-                $this->$rain = $rain;
+                $this->tempD = $tempD;
+                $this->tempN = $tempN;
+                $this->rain = $rain;
+                $this->pressure = $pressure;
             }
-            function getFromSQL($records,$i){
+            function get_display()
+            {
+                return " 
+                Średnia temperatura w nocy: $this->tempN<br>
+                Średnia temperatura w dzień: $this->tempD <br>
+                Średnia opadów: $this->rain <br>
+                Średnia ciśnienia: $this->pressure <br>
+                ";
+            }
+        }
+        class AvrAll
+        {
+            public $avg;
+            function set_avg($avg)
+            {
+                $this->avg = $avg;
+            }
+            function get_avg()
+            {
+                return round($this->avg,2);
+            }
+            function countAvg($array)
+            {
+                $i = 0;
+                $result = 0;
+                foreach ($array as $rows) {
+                    $result = $result + intVal($rows);
+                    //var_dump($rows[0]);
+                    $i++;
+                }
+                $resulter = $result / $i;
+                return $resulter;
+            }
+            function getFromSQL($records, $i)
+            {
                 $aDayT = array();
-                foreach($records as $record){
-                    $record[$i] = $aDayT;  
+                foreach ($records as $record) {
+                    array_push($aDayT, $record[$i]);
                 }
                 return $aDayT;
             }
-            function AvrCounter($array){
-                $i = 0;
-                $result = 0;
-                foreach($array as $rows){
-                    $result = $result + $rows[0];
-                    $i++;
-                }
-                $resulter = $result/$i;
-                return $resulter;
-            }
         }
-            
-        $avrAll = new AvrAll;
+
+
+
+        $nightTArr = new AvrAll();
+        $dayTArr = new AvrAll();
+        $rainArr = new AvrAll();
+        $pressureArr = new AvrAll();
+        $nightTArr->set_avg($nightTArr->countAvg($nightTArr->getFromSQL($records, 3)));
+        $dayTArr->set_avg($dayTArr->countAvg($dayTArr->getFromSQL($records, 4)));
+        $rainArr->set_avg($rainArr->countAvg($rainArr->getFromSQL($records, 5)));
+        $pressureArr->set_avg($pressureArr->countAvg($pressureArr->getFromSQL($records, 6)));
+        $display = new AvgDisplay();
+        $display->set_avg($nightTArr->get_avg(),$dayTArr->get_avg(),$rainArr->get_avg(),$pressureArr->get_avg());
+        echo($display->get_display());
+        //var_dump($nightTArr);
         $conn->close();
         ?>
     </div>
