@@ -1,0 +1,31 @@
+body,html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#upLeft, #upRight,#upCenter,#downRight,#downCenter,#downLeft{
+    background-color: saddlebrown;
+    color:white;
+    height: 100px;
+    float: left;
+}
+#upLeft,#downLeft{
+width: 55%;
+font-size: 120%;
+}
+#upCenter,#downCenter{
+    width: 25%;
+}
+#downRight,#upRight{
+    width: 20%;
+    text-align: right;
+}
+#main{
+    background-color: snow;
+    padding: 70px;
+}
+a{
+    border: dotted 2px saddlebrown;
+    background-color: snow;
+    color:saddlebrown;
+    padding: 20px;
+    line-height: 100px;
+}
