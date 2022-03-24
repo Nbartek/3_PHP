@@ -19,20 +19,29 @@
     </section>
     <section id="main">
         <h3>Dodaj nowy zespół</h3>
-        <form action="dodanie.php" method="post"></form>
+        <form action="dodanie.php" method="post" id="ambulans" >
         <label for="karetka">Numer karetki</label><br>
-        <input type="number" id="karetka" name="karetka">
-        <label for="jeden">Imie i nazwisko pierwszego ratownika: </label>
-        <input type="text" name="jeden" id="jeden">
-        <label for="dwa">Imie i nazwisko drugiego ratownika: </label>
-        <input type="text" name="dwa" id="dwa">
-        <label for="trzy">Imie i nazwisko trzeciego ratownika: </label>
-        <input type="text" name="trzy" id="trzy">
-        <input type="button" name="clear" id="clear" value="CZYŚĆ">
-        <input type="submit" name="sumbmit" value="DODAJ">
+        <input type="number" id="karetka" name="karetka"><br>
+        <label for="jeden">Imie i nazwisko pierwszego ratownika: </label><br>
+        <input type="text" name="jeden" id="jeden"><br>
+        <label for="dwa">Imie i nazwisko drugiego ratownika: </label><br>
+        <input type="text" name="dwa" id="dwa"><br>
+        <label for="trzy">Imie i nazwisko trzeciego ratownika: </label><br>
+        <input type="text" name="trzy" id="trzy"><br>
+        <input type="reset"  value="CZYŚĆ">
+        <input type="submit" name="submit" value="DODAJ">
+    </form>
+    </section>
+    <section id="mainRight">
+        <table id="tabela">
+            <tr>
+                <th>Nr Karetki</th><th> Pierwszy Ratownik</th><th>Drugi Ratownik</th><th>Trzeci Ratownik</th>
+            </tr>
+
+        </table>
     </section>
     <section id="downLeft">
-        <a href="kwerendy.txt">Zobacz kwerendy</a>
+        <a href="../ark3_ambulans/PESEL/kwerendy.txt">Zobacz kwerendy</a>
     </section>
     <section id="downCenter">
         <h5>Przypominamy numery alarmowe</h5>
@@ -44,5 +53,6 @@
     <section id="downRight">
         <p>Autor<br>PESEL</p>
     </section>
+    <script src="dodanie.js"></script>
 </body>
 </html>

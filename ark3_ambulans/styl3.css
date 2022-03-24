@@ -18,9 +18,11 @@ font-size: 120%;
     width: 20%;
     text-align: right;
 }
-#main{
+#main,#mainRight{
     background-color: snow;
     padding: 70px;
+    width: 45%;
+    float: left;
 }
 a{
     border: dotted 2px saddlebrown;
@@ -28,4 +30,7 @@ a{
     color:saddlebrown;
     padding: 20px;
     line-height: 100px;
+}
+ol{
+    list-style-type: lower-alpha;
 }
