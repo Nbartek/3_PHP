@@ -32,7 +32,9 @@ function isValidForm(){
 
 }
 function AjaxTable(){
-    var ajax = XMLHttpRequest();
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "dodanie.php");
+    xhttp.send();
 
 
 }

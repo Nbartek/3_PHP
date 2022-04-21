@@ -1,0 +1,5 @@
+Kwerenda 1
+Kwerenda 2
+Kwerenda 3
+Kwerenda 4
+alter table 'klasa' dfhgd

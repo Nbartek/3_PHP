@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+
+<body>
+    <section class="left">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <button id="Indigo" value="indigo">Indigo</button>
+        <button id="SteelBlue" value="steelblue">SteelBlue</button>
+        <button id="Olive" value="olive">Olive</button>
+        <p>Podaj kolor czcionki<br>
+                <select name="font" id="font">
+            <option value="White">White</option>
+            <option value="Tan">Tan</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Plum">Plum</option>
+        </select>
+        </p>
+
+        <p>Podaj rozmiar czcionki w procentach, np. 200%<br>
+                <input type="number" value="100" name="font-size">
+        </p>
+
+        <p>Czy rysunek ma mieć ramkę?<br>
+        <!-- <label for="ifborder">Rysuj ramkę</label> -->
+        <input type="checkbox" name="ifborder" id="ifborder" checked>Rysuj ramkę</p>
+        <p>Jaki jest typ punktatora listy?<br>
+                <!-- <label for="dysk">Dysk</label> -->
+        <input type="radio" name="lista" id="dysk" checked value="dysk">dysk <br>
+        <!-- <label for="kwadrat">Kwadrat</label> -->
+        <input type="radio" name="lista" id="kwadrat" value="kwadrat">kwadrat <br>
+        <!-- <label for="okrag">Okrąg</label> -->
+        <input type="radio" name="lista" id="okrag" value="okrąg">okrąg <br>
+        </p>
+
+    </section>
+    <section class="right">
+        <div id="one">
+            <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+        </div>
+        <div id="two">
+            <ul>
+                <li>element 1</li>
+                <li>element 2</li>
+                <li>element 3</li>
+            </ul>
+        </div>
+
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod labore cum est officia nisi expedita ducimus
+            consequuntur blanditiis vero, quas iusto et, eaque, iste quo nostrum aspernatur libero ratione autem!</p>
+    </section>
+    <section class="footer">
+        Autor: PESEL
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
