@@ -1,22 +1,19 @@
-var color1 = document.querySelector("#Indigo");
-var color2 = document.querySelector("#SteelBlue");
-var color3 = document.querySelector("#Olive");
 var font = document.querySelector("#font");
 var fontSizee = document.querySelector("#font-size");
 var border = document.querySelector("#ifborder");
 //var OL = document.querySelector(".lista");
 console.log(document.querySelector('input[type = radio]:checked').checked.value);
 
-var kolory = ['white','blue','green','yellow'];
+var kolory = ['Indigo','SteelBlue','Olive','white','blue','green','yellow'];
 
-color1.addEventListener("click", () => { changeBackground(color1.value) });
-color2.addEventListener("click", () => { changeBackground(color2.value) });
-color3.addEventListener("click", () => { changeBackground(color3.value) });
 font.addEventListener('change', changeFont);
 fontSizee.addEventListener('focusout', ()=>{changeFontSize(fontSizee.value)});
 border.addEventListener('change', ()=>{changeBorder(border.checked)});
-document.querySelector('input[type = radio]:checked').addEventListener('change',()=>{changeOL(document.querySelector('input[type = radio]:checked')).value})
+
 addColors(kolory);
+
+
+
 function changeBackground(color) {
     document.querySelector(".right").style.backgroundColor = color;
 }
@@ -49,6 +46,8 @@ function addColors(colors){
        z.id = ''+color+'';
        z.style.backgroundColor = ''+color+'';
        z.innerHTML = ''+color+'';
+
         document.querySelector("#for4").appendChild(z);
+        z.addEventListener('click',()=>{changeBackground(color)})
     }
 }
