@@ -13,9 +13,11 @@
     <section class="left">
         <h1>Konfigurator stylu</h1>
         <p>Podaj kolor tła</p>
-        <button id="Indigo" value="indigo">Indigo</button>
+        <div id="for4">
+                  <button id="Indigo" value="indigo">Indigo</button>
         <button id="SteelBlue" value="steelblue">SteelBlue</button>
-        <button id="Olive" value="olive">Olive</button>
+        <button id="Olive" value="olive">Olive</button>  
+        </div>
         <p>Podaj kolor czcionki<br>
                 <select name="font" id="font">
             <option value="White">White</option>
@@ -26,7 +28,7 @@
         </p>
 
         <p>Podaj rozmiar czcionki w procentach, np. 200%<br>
-                <input type="number" value="100" name="font-size">
+                <input type="number" value="100" id="font-size" name="font-size">
         </p>
 
         <p>Czy rysunek ma mieć ramkę?<br>
@@ -34,23 +36,23 @@
         <input type="checkbox" name="ifborder" id="ifborder" checked>Rysuj ramkę</p>
         <p>Jaki jest typ punktatora listy?<br>
                 <!-- <label for="dysk">Dysk</label> -->
-        <input type="radio" name="lista" id="dysk" checked value="dysk">dysk <br>
+        <input type="radio" name="lista" id="dysk"class='lista' checked value="disc">dysk <br>
         <!-- <label for="kwadrat">Kwadrat</label> -->
-        <input type="radio" name="lista" id="kwadrat" value="kwadrat">kwadrat <br>
+        <input type="radio" name="lista" id="kwadrat" class='lista' value="square">kwadrat <br>
         <!-- <label for="okrag">Okrąg</label> -->
-        <input type="radio" name="lista" id="okrag" value="okrąg">okrąg <br>
+        <input type="radio" name="lista" id="okrag" class='lista' value="circle">okrąg <br>
         </p>
 
     </section>
     <section class="right">
         <div id="one">
-            <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+            <img id="dababy" src="gibraltar.jpg" alt="półwysep Gibraltar">
         </div>
         <div id="two">
             <ul>
-                <li>element 1</li>
-                <li>element 2</li>
-                <li>element 3</li>
+                <li class="qwe">element 1</li>
+                <li class="qwe">element 2</li>
+                <li class="qwe">element 3</li>
             </ul>
         </div>
 
