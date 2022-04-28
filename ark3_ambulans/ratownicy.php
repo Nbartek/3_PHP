@@ -29,7 +29,8 @@
         <label for="trzy">Imie i nazwisko trzeciego ratownika: </label><br>
         <input type="text" name="trzy" id="trzy"><br>
         <input type="reset"  value="CZYŚĆ">
-        <input type="submit" name="submit" value="DODAJ">
+<!--        <input type="submit" name="submit" value="DODAJ">-->
+            <input type="button" name="submit" id="submit" value="DODAJ">
     </form>
     </section>
     <section id="mainRight">
@@ -37,6 +38,10 @@
             <tr>
                 <th>Nr Karetki</th><th> Pierwszy Ratownik</th><th>Drugi Ratownik</th><th>Trzeci Ratownik</th>
             </tr>
+            <?php
+            require_once "display.php";
+                //display();
+            ?>
 
         </table>
     </section>
@@ -53,6 +58,7 @@
     <section id="downRight">
         <p>Autor<br>PESEL</p>
     </section>
+    <script src="jquery-3.6.0.js"></script>
     <script src="dodanie.js"></script>
 </body>
 </html>
