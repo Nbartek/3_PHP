@@ -12,14 +12,14 @@
         <h2>Dodanie zespołu ratowniczego</h2>
     </section>
     <section id="upCenter">
-        <p>KOntakt:<br> 022 222 11 333</p>
+        <p>Kontakt:<br> 022 222 11 333</p>
     </section>
     <section id="upRight">
         <img src="obraz.jpg" alt="Ratownicy">
     </section>
     <section id="main">
         <h3>Dodaj nowy zespół</h3>
-        <form action="dodanie.php" method="post" id="ambulans" >
+        <form  id="ambulans" action="" >
         <label for="karetka">Numer karetki</label><br>
         <input type="number" id="karetka" name="karetka"><br>
         <label for="jeden">Imie i nazwisko pierwszego ratownika: </label><br>
@@ -29,8 +29,8 @@
         <label for="trzy">Imie i nazwisko trzeciego ratownika: </label><br>
         <input type="text" name="trzy" id="trzy"><br>
         <input type="reset"  value="CZYŚĆ">
-<!--        <input type="submit" name="submit" value="DODAJ">-->
-            <input type="button" name="submit" id="submit" value="DODAJ">
+        <input type="submit" name="submit" id="submit" value="DODAJ">
+<!--            <input type="button" name="submit" id="submit" value="DODAJ">-->
     </form>
     </section>
     <section id="mainRight">
@@ -40,7 +40,6 @@
             </tr>
             <?php
             require_once "display.php";
-                //display();
             ?>
 
         </table>

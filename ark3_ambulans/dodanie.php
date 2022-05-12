@@ -1,7 +1,5 @@
 <?PHP
-if (($_POST['action']) === True) {
     add();
-}
 function add()
 {
     $conn = new mysqli("localhost", 'root', null, "3tipg_ambulans");
@@ -20,5 +18,5 @@ function add()
     }
 
     $conn->close();
-    header("Location: ratownicy.php");
+    //header("Location: ratownicy.php");
 }

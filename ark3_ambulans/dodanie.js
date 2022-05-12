@@ -2,24 +2,30 @@ var jeden = document.querySelector("#jeden");
 var dwa = document.querySelector("#dwa");
 var trzy = document.querySelector("#trzy");
 var karetka = document.querySelector("#karetka");
+console.log('halo');
+$('form').on('submit',function(event) {
 console.log("dzaila");
-document.querySelector("#submit").addEventListener("click",function() {
-    console.log(isValidForm());
-    $.ajax({
-        type: "POST",
-        url: "dodanie.php",
-        data: { 'action': true }
-    }).done(function( msg ) {
-        console.log( "Data Saved: " + msg );
-    });
-    $.ajax({url:'display.php', success: function(dsfsd,sdfsdf,xml){
-        console.log(xml.responseText);
-        var temp = document.querySelector("#tabela").innerHTML;
-        document.querySelector("#tabela").innerHTML =xml.responseText;
-        }
+    if(isValidForm()==true){
+        var formData = {
+            jeden: jeden.val(),
+            dwa: dwa.val(),
+            trzy:trzy.val(),
+            karetka:karetka.val()
+        };
+        //var formData = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "dodanie.php",
+            data: formData
+        }).done(function( data ) {
+        //document.querySelector("#tabela").ajax.reload();//tylko to było potrzebne
+console.log(data);
+        });
 
-    })
-    return isValidForm();
+        console.log(isValidForm());
+
+    }
+    event.preventDefault();
 });
 function isValidForm(){
     if(karetka.value.trim() == ""){
