@@ -1,0 +1,12 @@
+Kwerenda 1:
+INSERT INTO `filmy`(`gatunki_id`,`tytul`,`rok`,`ocena`) VALUES (5,'Suburbicon',2017,5);
+Kwerenda 2:
+SELECT filmy.tytul,gatunki.nazwa from `filmy` inner join gatunki on filmy.gatunki_id = gatunki.id where ocena like 6
+Kwerenda 3:
+select tytul,rok from `filmy` where gatunki_id like 3 and ocena like 6
+Kwerenda 4:
+CREATE table aktorzy(
+id INT NOT NULL,
+imie TEXT,
+nazwisko TEXT
+);
