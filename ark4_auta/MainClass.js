@@ -5,32 +5,48 @@ export default class Site {
         this.border = border;
         this.ol = ol;
     }
+    changeOLIcons(){
+        this.ol.forEach((e)=>{
+            e.addEventListener('click',()=>{
+                console.log(this.ol.value);
+                if(this.ol.value === "disc" ){
+                    e.style.listStyleType = "disc";
+                }else if(this.ol.value === "square"){
+                    e.style.listStyleType = "square";
+                }else{
+                    e.style.listStyleType = "circle";
+                }
+        })
 
-    static changeBorder(checked) {
+        })
+
+    }
+     changeBorder() {
         this.border.addEventListener('change', () => {
-            if (checked == true) {
+            console.log(this.border.checked);
+            if (this.border.checked === true) {
                 document.querySelector("#dababy").style.border = "solid 1px white";
-            } else if (checked == false)
+            } else if (this.border.checked === false)
                 document.querySelector("#dababy").style.border = "0";
         })
     }
-    static changeFontSize(fontSizee) {
+     changeFontSize() {
+        console.log(this.fontSize.value);
         this.fontSize.addEventListener('focusout', () => {
-            document.querySelector(".right").style.fontSize = fontSizee.value + '%';
-            console.log(fontSizee.value + '%');
-            console.log(fontSizee.value);
+            document.querySelector(".right").style.fontSize = this.fontSize.value + '%';
+            console.log(this.fontSize.value + '%');
         })
     }
-    static changeFont() {
+    changeFont() {
         this.font.addEventListener('change',()=>{
-            document.querySelector(".right").style.color = font.value;
+            document.querySelector(".right").style.color = this.font.value;
         })
     }
-    changeBackground(color) {
+    static changeBackground(color) {
         document.querySelector(".right").style.backgroundColor = color;
     }
-    static addColors(colors){
-        for(color of colors){
+    addColors(colors){
+        for(let color of colors){
             //console.log(color);
           const z =document.createElement("button");
            z.id = ''+color+'';
@@ -42,7 +58,7 @@ export default class Site {
             //console.log(z);
             document.querySelector("#for4").append(z);
             z.addEventListener('click',(e)=>{
-                changeBackground(e.target.value);
+                Site.changeBackground(e.target.value);
                 console.log(e);
             })
         }

@@ -1,15 +1,20 @@
 import Site from "./MainClass.js";
+const font = document.querySelector("#font");
+const fontSizee = document.querySelector("#font-size");
+const border = document.querySelector("#ifborder");
+const ol = document.querySelectorAll(".qwe");
+
 let obj = new Site(font,fontSizee,border,ol);
 
-var font = document.querySelector("#font");
-var fontSizee = document.querySelector("#font-size");
-var border = document.querySelector("#ifborder");
-var ol = document.querySelectorAll(".qwe");
+
 //console.log(document.querySelector('input[type = radio]:checked').checked.value);
 //console.log(OL);
-var kolory = ['Indigo','SteelBlue','Olive','white','blue','green','yellow','purple'];
-obj.changeFont;
+const kolory = ['Indigo','SteelBlue','Olive','white','blue','green','yellow','purple'];
 obj.addColors(kolory);
+obj.changeBorder();
+obj.changeFontSize();
+obj.changeFont();
+obj.changeOLIcons()
 //font.addEventListener('change', changeFont);
 //fontSizee.addEventListener('focusout', ()=>{changeFontSize(fontSizee.value)});
 //border.addEventListener('change', ()=>{changeBorder(border.checked)});
