@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl1.css">
+    <title>Filmy</title>
+</head>
+<body>
+    <section id="left-panel">
+        <h3>Dostepne gatunki filmów</h3>
+        <ol>
+            <li>Sci-Fi</li>
+            <li>animacja</li>
+            <li>dramat</li>
+            <li>horror</li>
+            <li>komedia</li>
+        </ol>
+        <p><a href="kadr.jpg">Pobierz Obraz</a></p>
+        <p><a href="repertuar-kin.pl" target="_blank">Sparwdz reertuar kin</a></p>
+    </section>
+    <section id="right-up">
+        <h1>FILMOTEKA</h1>
+
+    </section>
+    <section id="right-center">
+        <form action="dodaj.php" method="post">
+            <label for="title">Tytuł: </label>
+            <input type="text" id="title" name="title"><br>
+            <label for="genre">Gatunek filmu: </label>
+            <input type="number" id="genre" name="genre"><br>
+            <label for="year">Rok produkcji: </label>
+            <input type="number" id="year" name="year"><br>
+            <label for="grade">Ocena:</label>
+            <input type="number" id="grade" name="grade"><br>
+            <input type="reset" value="CZYŚĆ">
+            <input type="submit" value="DODAJ">
+        </form>
+    </section>
+    <section id="right-down">
+        <img src="kadr.jpg" alt="zdjecia filmowe">
+    </section>
+    <section id="footer">
+        <p>Autor strony: PESEL</p>
+    </section>
+</body>
+</html>
