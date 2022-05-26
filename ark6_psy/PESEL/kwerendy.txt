@@ -1,0 +1,8 @@
+Kwerenda 1:
+CREATE TABLE `3tipg_psy`.`uzytkownicy` ( `Id` INT NOT NULL AUTO_INCREMENT , `login` VARCHAR(50) , `haslo` VARCHAR(50) , PRIMARY KEY (`Id`));
+Kwerenda 2:
+INSERT INTO `uzytkownicy`(`Id`, `login`, `haslo`) VALUES (1,'Grzegorz','g');
+Kwerenda 3:
+Select login from uzytkownicy
+Kwerenda 4:
+SELECT id,login FROM `uzytkownicy` where haslo like "4%";
