@@ -27,25 +27,30 @@
 </form>
 <?php
  $conn = new mysqli('localhost','root',null,'3tipg_psy');
-$login = isset($_POST['login']);
-$haslo = isset($_POST['haslo']);
-$repeat = isset($_POST['repeat']);
+$login = trim($_POST['login']);
+$haslo = trim($_POST['haslo']);
+$repeat = trim($_POST['repeat']);
 //var_dump($login);
-$sql = "Select login from uzytkownicy where login like $login";
- $result = $conn->query($sql);
- //var_dump($result);
-if(!empty($login)||!empty($haslo)||!empty($repeat)){
+$sql = "Select login from uzytkownicy where login like '$login'";
+$result = $conn->query($sql);
+$dingus = $result->fetch_row();
+//var_dump($dingus);
+if($login ==""||$haslo==""||$repeat==""){
+
+    $dingus = $result->fetch_array();
     echo("<p>wypełnij wszsytkie pola</p>");
-} 
-if($result === null){
+    //var_dump($result);
+}
+else if($dingus !=null){
 echo("<p>login wystepuje w bazie danych, konto nie zostało dodane</p>");
+//var_dump($result);
 } 
-if(trim($haslo)!=trim($repeat)){
+else if(trim($haslo)!=trim($repeat)){
     echo("<p>hasła nie są takie same, konto nie zostało dodane</p>");
 }else{
     $password = sha1($haslo);
-   var_dump($haslo);
-   $sql2 = "INSERT INTO `uzytkownicy`( `login`, `haslo`) VALUES ('$login','$haslo')";
+   //var_dump($result);
+   $sql2 = "INSERT INTO `uzytkownicy`( `login`, `haslo`) VALUES ('$login','$password')";
    $conn->query($sql2);
 }
  $conn->close()
