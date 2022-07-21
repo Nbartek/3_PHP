@@ -1,0 +1,8 @@
+Kwerenda 1
+SELECT marka,model FROM `samochody` WHERE kolor = 'czerwony'
+Kwerenda 2
+UPDATE `samochody` SET `stan`= 'dobry' WHERE rocznik = 2003
+Kwerenda 3
+create user 'andrzej'@localhost identified by 'andrzej1@'
+Kwerenda 4
+grant UPDATE,SELECT on `3tipg_samochody`.* to 'andrzej'@localhost
